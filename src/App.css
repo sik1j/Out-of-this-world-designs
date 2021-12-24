@@ -177,13 +177,14 @@ img {
 .cards-container {
   margin-inline: calc(100%/21);
   grid-template-columns: repeat(3, 1fr);
-  padding-block: 2rem;
-  gap: 8rem;
+  padding-block: 5rem;
+  padding-inline: 5rem;
+  gap: 10rem;
 }
 .cards-container div {
   background-color: white;
   aspect-ratio: 1;
-  font-size: 20rem;
+  font-size: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
