@@ -14,6 +14,7 @@ html {
   --ff-century: 'Old Standard', serif;
   --ff-monoton: 'Monoton', serif;
   --fc-dark: black;
+  --fc-accent: #1597ff;
   --fc-light: white;
   --bg-dark: black;
   --bg-accent: #1597FF;
@@ -55,6 +56,9 @@ img {
 }
 .fc-dark {
   color: var(--fc-dark);
+}
+.fc-accent {
+  color: var(--fc-accent);
 }
 .fc-light {
   color: var(--fc-light)
@@ -212,10 +216,94 @@ img {
 /* Indiviual Components  */
 /* --------------------- */
 .contact-btn {
+  position: relative;
   padding-inline: 1.2em;
   padding-block: .4em;
   border-radius: .3em;
   background-color: var(--bg-accent);
+}
+.neon-btn {
+  position: relative;
+  padding-inline: 1.2em;
+  padding-block: .4em;
+  color: var(--bg-accent);
+  overflow: hidden;
+}
+.neon-btn:hover {
+  background-color: var(--bg-accent);
+  color: white;
+  box-shadow: 0 0 5px var(--bg-accent),
+              0 0 25px var(--bg-accent),
+              0 0 50px var(--bg-accent),
+              0 0 100px var(--bg-accent),
+              0 0 200px var(--bg-accent);
+}
+.neon-btn span {
+  position: absolute;
+}
+.neon-btn span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--bg-accent));
+  animation: spanTop 2000ms linear infinite;
+}
+.neon-btn span:nth-child(2) {
+  top: 0;
+  right: 0;
+  width:2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--bg-accent));
+  animation: spanRight 2000ms 1000ms linear infinite;
+}
+.neon-btn span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height: 2px;
+  background: linear-gradient(to left, transparent, var(--bg-accent));
+  animation: spanBottom 2000ms 2000ms linear infinite;
+}
+.neon-btn span:nth-child(4) {
+  top: 0;
+  left: 0;
+  height:100%;
+  width: 2px;
+  background: linear-gradient(to top, transparent, var(--bg-accent));
+  animation: spanLeft 2000ms 3000ms linear infinite;
+}
+@keyframes spanTop {
+  from {
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(100%);
+  }
+}
+@keyframes spanRight {
+  from {
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(100%);
+  }
+}
+@keyframes spanBottom {
+  from {
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+@keyframes spanLeft {
+  from {
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(-100%);
+  }
 }
 .seperator {
   margin: 0.5rem;
@@ -242,10 +330,11 @@ img {
   font-weight: 300;
   font-size: 6.1337rem;
 }
-.join-sect .contact-btn {
-  margin-top: 2rem;
+.join-sect .neon-btn {
   font-size: 2.06481rem;
-  padding-block: .5em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-block: 1em;
   padding-inline: 2.5em;
 }
 .teste {
@@ -324,4 +413,9 @@ footer {
   width: 40px;
   aspect-ratio: 1;
   border-radius: 50%;
+}
+
+#hero-text-btn {
+  width: fit-content;
+  font-size: 2.5rem;
 }

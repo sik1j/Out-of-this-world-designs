@@ -44,7 +44,11 @@ function App() {
             that are out of this
             <p className="uppercase"> World</p>
           </div>
-          <a href="#" className="contact-btn">
+          <a id="hero-text-btn" href="#" className="neon-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             Join Us
           </a>
         </div>
@@ -101,7 +105,11 @@ function App() {
           }}
         >
           <h2>Book a meeting with us</h2>
-          <a href="" className="contact-btn">
+          <a href="" className="neon-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             Join Us
           </a>
         </div>
