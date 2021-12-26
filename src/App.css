@@ -320,7 +320,7 @@ img {
 
 .join-sect {
   padding-block: 6rem;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 5rem;
   background-color: black;
